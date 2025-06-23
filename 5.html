@@ -1,0 +1,29 @@
+
+<script type="text/javascript">
+
+	const iterable = {
+			
+			one: 1,
+			two: 2,
+			three: 3,
+			
+			[Symbol.iterator]() {
+				let i = 0;
+				pairs = Object.entries(this);
+				
+				return {
+					next() {
+						if (i < pairs.length) {
+							return { value: pairs[i++], done: false };
+						}
+						return { value: undefined, done: true };
+					},
+				};
+			},
+	};
+
+	for (const value of iterable) {
+		console.log(value);
+	}
+
+</script>

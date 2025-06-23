@@ -1,0 +1,17 @@
+
+<script type="text/javascript">
+	Array.prototype.map = function(callback) {
+		console.log("Array.prototype.map implemented!")
+	    let new_arr = []
+	    for (let item of this) {
+	        new_arr.push(callback(item))
+	    }
+	    return new_arr
+	}
+	
+	var arr = [1, 2, 3]
+	console.log(arr.map((i) => i * 2));
+	console.log(arr.map((i) => i * i));
+	console.log(arr.map((i) => i * i * i));
+	console.log(arr.map((i) => i / 2));
+</script>

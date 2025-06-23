@@ -1,0 +1,13 @@
+
+<script type="text/javascript">
+	Object.prototype.objCustom = function () {};
+	Array.prototype.arrCustom = function () {};
+	
+	const iterable = [3, 5, 7];
+	iterable.foo = "hello";
+	
+	for (const prop in iterable) {
+	  console.log(prop);
+	}
+	// "0", "1", "2", "foo", "arrCustom", "objCustom"
+</script>

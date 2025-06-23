@@ -1,0 +1,26 @@
+
+<script type="text/javascript">
+	function isEmpty(obj) {
+		
+		for (const prop in obj) {
+			if (Object.hasOwn(obj, prop)) {
+				return false;
+			}
+		}
+
+		return true;
+	}
+	
+	var obj = {"x": 5, "y": 2};
+	console.log(isEmpty(obj));
+	
+	var obj = {};
+	console.log(isEmpty(obj));
+	
+	var arr = [null, false, 0];
+	console.log(isEmpty(arr));
+	
+	var arr = [];
+	console.log(isEmpty(arr));
+	
+</script>
