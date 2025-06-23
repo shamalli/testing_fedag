@@ -4,6 +4,6 @@ git add .
 git remote add origin https://github.com/shamalli/testing_fedag
 git branch -M main
 
-git commit -m "Iitial release"
+git commit -m "Update"
 git push -u origin main
 PAUSE
